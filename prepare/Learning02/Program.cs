@@ -1,17 +1,10 @@
 using System;
 
-namespace Learning02
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello Learning02 World!");
-        }
+        // Abstraction Learning Activity
+        Console.WriteLine("Hello Develop02 World!");
     }
 }
-
-//CLI ->
-//CIL ->
-//CLR ->
-//Native machine code
