@@ -17,8 +17,13 @@ class Program
         job2._startYear = 2019;
         job2._endYear = 2023;
 
-        Console.WriteLine(job1._company);
-        Console.WriteLine(job2._company);
+        Resume myResume = new Resume();
+        myResume._personName = "Abraham Jimenez";
+        myResume._jobs.Add(job1);
+        myResume._jobs.Add(job2);
+
+        myResume.Display();
+
     }
 
 }
