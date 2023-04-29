@@ -8,10 +8,10 @@ public class Job
     public int _startYear;
     public int _endYear;
 
-    public void Dispay()
+    public void Display()
     {
         //Step 5
-        Console.WriteLine($"");
+        Console.WriteLine($"{_jobTitle} ({_company}) {_startYear}-{_endYear}");
     }
 }
 
