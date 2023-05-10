@@ -7,15 +7,19 @@ namespace Develop02
     {
         static void Main(string[] args)
         {
-            Entry myEntry = new Entry();
-            myEntry.Hold("What is your name?", "Abraham Jimenez", "8 May 2023");
+            Prompts myPrompts = new Prompts();
+            string prompt = myPrompts.GetRandomPrompt();
+            //string response = Console.ReadLine();
 
-            Entry yourEntry = new Entry();
-            yourEntry.Hold("What is your name?", "Abraham Joe", "8 May 2023");
+            Entry myEntry = new Entry();
+            myEntry.Hold(prompt, "Abraham Jimenez", "8 May 2023");
+
+            //Entry yourEntry = new Entry();
+            //yourEntry.Hold(prompt, response, "8 May 2023");
 
             Journal journal = new Journal();
             journal.AddEntry(myEntry);
-            journal.AddEntry(yourEntry);
+            //journal.AddEntry(yourEntry);
 
             List<Entry> entries = journal.GetAllEntries();
             foreach (Entry entry in entries)
