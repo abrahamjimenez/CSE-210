@@ -26,5 +26,23 @@ namespace Develop02
 			int randomIndex = number.Next(0, prompts.Count);
 			return prompts[randomIndex];
 		}
+
+		public string Display()
+		{
+			string prompt = GetRandomPrompt();
+			return prompt;
+		}
+
+		public string AskInput()
+		{
+			return Console.ReadLine();
+		}
+
+		public string DisplayCurrentDate()
+		{
+			DateTime currentDate = DateTime.Now;
+			string dateText = currentDate.ToShortDateString();
+			return dateText;
+		}
 	}
 }

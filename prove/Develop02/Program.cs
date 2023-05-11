@@ -8,25 +8,30 @@ namespace Develop02
         static void Main(string[] args)
         {
             Prompts myPrompts = new Prompts();
-            string prompt = myPrompts.GetRandomPrompt();
-            //string response = Console.ReadLine();
+            string prompt = myPrompts.Display();
+            Console.WriteLine(prompt);
+            string userInput = myPrompts.AskInput();
+            Console.WriteLine("");
+            // Get Date
+            string currentDate = myPrompts.DisplayCurrentDate();
 
             Entry myEntry = new Entry();
-            myEntry.Hold(prompt, "Abraham Jimenez", "8 May 2023");
-
-            Entry yourEntry = new Entry();
-            yourEntry.Hold(prompt, "Joe", "8 May 2023");
+            myEntry.Hold(prompt, userInput, currentDate);
 
             Journal journal = new Journal();
             journal.AddEntry(myEntry);
-            journal.AddEntry(yourEntry);
 
             List<Entry> entries = journal.GetAllEntries();
             foreach (Entry entry in entries)
             {
                 string message = entry.ConvertToString();
-                Console.WriteLine(message);
             }
+
+            // Save to file
+            //foreach (Entry x in entries)
+            //{
+            //    Console.WriteLine(x);
+            //}
         }
     }
 }
