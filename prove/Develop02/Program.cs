@@ -54,7 +54,24 @@ namespace Develop02
                 }
                 else if (input == 3)
                 {
-                    Console.WriteLine("3");
+
+                    string filename = "myFile.txt";
+
+                    // Load file
+                    string[] lines = System.IO.File.ReadAllLines(filename);
+
+                    foreach (string line in lines)
+                    {
+
+                        // Console.WriteLine(line);
+                        // line will have something like this 5/11/2023 - What is the best part of your day? - Everything
+
+                        string[] parts = line.Split("-");
+
+                        Console.WriteLine("");
+                        Console.WriteLine("Reading from file...");
+                        Console.WriteLine(line);
+                    }
                 }
                 else if (input == 4)
                 {
