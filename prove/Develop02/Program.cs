@@ -49,6 +49,15 @@ namespace Develop02
 
                     }
 
+                    // Save to file
+                    string filename = "myFile.txt";
+
+                    using (StreamWriter outputFile = new StreamWriter(filename))
+                    {
+                        //Console.WriteLine("Saving...");
+                        outputFile.WriteLine($"{currentDate} - {prompt} - {userInput}");
+                    }
+
                     Console.WriteLine("Please choose one of the following choices");
                     Console.WriteLine("1. Write");
                     Console.WriteLine("2. Display");
@@ -80,12 +89,29 @@ namespace Develop02
 
                         }
                     }
-                    else if (input_two == 2) {
+                    else if (input_two == 2)
+                    {
+                        //string filename = "myFile.txt";
 
+                        // Load file
+                        string[] lines = System.IO.File.ReadAllLines(filename);
+
+                        foreach (string line in lines)
+                        {
+
+                            // Console.WriteLine(line);
+                            // line will have something like this 5/11/2023 - What is the best part of your day? - Everything
+
+                            string[] parts = line.Split("-");
+
+                            Console.WriteLine("");
+                            //Console.WriteLine("Reading from file...");
+                            Console.WriteLine(line);
+                        }
                     }
                     else if (input_two == 3)
                     {
-                        string filename = "myFile.txt";
+                        //string filename = "myFile.txt";
 
                         // Load file
                         string[] lines = System.IO.File.ReadAllLines(filename);
@@ -107,7 +133,7 @@ namespace Develop02
                     {
 
                         // Save to file
-                        string filename = "myFile.txt";
+                        //string filename = "myFile.txt";
 
                         using (StreamWriter outputFile = new StreamWriter(filename))
                         {
@@ -119,11 +145,26 @@ namespace Develop02
                     {
                         x = false;
                     }
-
                 }
                 else if (input == 2)
                 {
-                    Console.WriteLine("2");
+                    string filename = "myFile.txt";
+
+                    // Load file
+                    string[] lines = System.IO.File.ReadAllLines(filename);
+
+                    foreach (string line in lines)
+                    {
+
+                        // Console.WriteLine(line);
+                        // line will have something like this 5/11/2023 - What is the best part of your day? - Everything
+
+                        string[] parts = line.Split("-");
+
+                        Console.WriteLine("");
+                        //Console.WriteLine("Reading from file...");
+                        Console.WriteLine(line);
+                    }
                 }
                 else if (input == 3)
                 {
@@ -148,7 +189,10 @@ namespace Develop02
                 }
                 else if (input == 4)
                 {
-                    Console.WriteLine("4");
+
+                    // Save to file
+
+                    Console.WriteLine("Saving...");
                 }
                 else
                 {
