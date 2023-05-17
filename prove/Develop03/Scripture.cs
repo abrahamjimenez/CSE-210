@@ -1,7 +1,11 @@
 ﻿using System;
 namespace Develop03
 {
-	public class Scripture
+    /// <summary>
+    /// Hold references and words and display when needed 
+    /// </summary>
+
+    public class Scripture
 	{
 		public Scripture()
 		{

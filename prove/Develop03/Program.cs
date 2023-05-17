@@ -1,9 +1,17 @@
 using System;
+using Develop03;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop03 World!");
+        /// This gets the reference
+        Reference reference = new Reference();
+        string myReference = reference.ScriptureReference();
+
+        Console.WriteLine(myReference);
+
+
+
     }
 }
