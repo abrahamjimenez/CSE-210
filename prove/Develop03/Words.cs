@@ -7,9 +7,10 @@ namespace Develop03
 
     public class Words
 	{
-		public Words()
-		{
-		}
-	}
+        public string VerseWords()
+        {
+            return "For behold, this is my work and my glory to bring to pass the immortality and eternal life of man.";
+        }
+    }
 }
 

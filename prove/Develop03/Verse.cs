@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace Develop03
 {
     /// <summary>
@@ -7,11 +9,16 @@ namespace Develop03
 
     public class Verse
 	{
-        // For behold, this is my awork and my bglory—to bring to pass the cimmortality and deternal elife of man.
 
-        // TODO: Add words and loop through them
+        public void VerseWords()
+        { 
+            //public string verseWords = "For behold, this is my awork and my bglory—to bring to pass the cimmortality and deternal elife of man.";
 
-        public List<word>;
+        }
+        
+        //public List<word> words = new List<word>;
+        
+
 
     }
 }

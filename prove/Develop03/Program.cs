@@ -9,7 +9,18 @@ class Program
         Reference reference = new Reference();
         string myReference = reference.ScriptureReference();
 
-        Console.WriteLine(myReference);
+        //Console.WriteLine(myReference);
+
+        // This gets words
+        Words words = new Words();
+        string verseWords = words.VerseWords();
+        string[] wordsList = verseWords.Split(" ");
+
+
+        foreach (string word in wordsList)
+        {
+            Console.Write(word);
+        }
 
 
 
