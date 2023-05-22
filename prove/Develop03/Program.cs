@@ -1,28 +1,14 @@
 using System;
+using System.Linq;
 using Develop03;
 
 class Program
 {
     static void Main(string[] args)
     {
-        /// This gets the reference
-        Reference reference = new Reference();
-        string myReference = reference.ScriptureReference();
+        string verse = "For behold, this is my work and my glory to bring to pass the immortality and eternal life of man.";
 
-        //Console.WriteLine(myReference);
-
-        // This gets words
-        Words words = new Words();
-        string verseWords = words.VerseWords();
-        string[] wordsList = verseWords.Split(" ");
-
-
-        foreach (string word in wordsList)
-        {
-            Console.Write(word);
-        }
-
-
-
+        Verse myVerse = new Verse(verse); // Create an instance of the Verse class, passing the verse as an argument to the constructor
+        myVerse.MaskRandomWords(); // Call the MaskRandomWords method to start the word masking process
     }
 }

@@ -9,7 +9,7 @@ namespace Develop03
 
 	public class Reference
 	{
-        string reference = "Moses: 1:36";
+        string reference = "Moses: 1:39";
 
 		public string ScriptureReference()
 		{
