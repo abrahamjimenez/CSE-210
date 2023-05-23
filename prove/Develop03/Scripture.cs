@@ -9,6 +9,7 @@ namespace Develop03
 	{
 		public Scripture()
 		{
+
 		}
 	}
 }

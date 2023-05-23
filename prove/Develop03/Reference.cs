@@ -7,7 +7,12 @@ namespace Develop03
 
 	public class Reference
 	{
-		
+		private string reference;
+
+		public Reference()
+		{
+			reference = "Moses 1:39";
+		}
     }
 }
 
