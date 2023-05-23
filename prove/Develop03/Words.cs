@@ -29,7 +29,7 @@ namespace Develop03
             words[index] = "___"; //This will replace word with "___"
         }
 
-        public override string ToString() // This wouldnt work without override ¯_(ツ)_/¯
+        public override string ToString() // This wouldnt work without override or new, but I was suggested overrride so yeah ¯_(ツ)_/¯
         {
             return string.Join(" ", words); // This will join the '___' with the current verse
         }
