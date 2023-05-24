@@ -1,28 +1,17 @@
 ﻿using System;
 namespace Develop03
 {
-	/// <summary>
-	/// Store the reference
-	/// </summary>
+    /// <summary>
+    /// Store the reference
+    /// </summary>
 
-	public class Reference
-	{
-		private Scripture scripture;
+    public class Reference
+    {
+        private string reference;
 
-		public Reference(Scripture scripture)
-		{
-			this.scripture = scripture;
-		}
-
-		public string ReferenceKey()
-		{
-			return scripture.GetRandomScripture().Key;
-		}
-
-		public string ReferenceValue()
-		{
-            return scripture.GetRandomScripture().Value;
+        public Reference()
+        {
+            reference = "Moses 1:39";
         }
     }
 }
-
