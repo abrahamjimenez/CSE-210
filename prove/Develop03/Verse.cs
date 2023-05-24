@@ -11,11 +11,12 @@ namespace Develop03
         private int maskedCount; // Counts the amount of masked words
         private Reference reference; // Reference the Reference.cs file
 
-        public Verse(string verse)
+        public Verse(string verse, Reference reference)
         {
             words = new Words(verse); //This will go in Words.cs & Split the verse into a string
             totalWords = words.GetLength(); // This will take the verse, and get its length
             maskedCount = 0; // Set masked counts value to 0
+            this.reference = reference;
         }
 
         public void MaskRandomWords() // This will mask the words. Pretty much the program will run here :)
@@ -49,7 +50,7 @@ namespace Develop03
 
                 // Now that all the big code is done, we need to show this in the console
                 Console.Clear(); // Clear the console so it looks cute
-                Console.WriteLine($"{reference} {words}"); // Write the new words, but some will now be "___"
+                Console.WriteLine($"{reference.ReferenceKey} {words}"); // Write the new words, but some will now be "___"
                 Console.WriteLine("Please press enter: "); // This continues the enter prompt while program is in the while loop
 
                 maskedCount += 2; // This will increase until it cant anymore. The program will then quit once it's done

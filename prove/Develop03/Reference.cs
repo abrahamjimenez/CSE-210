@@ -7,12 +7,22 @@ namespace Develop03
 
 	public class Reference
 	{
-		private string reference;
+		private Scripture scripture;
 
-		public Reference()
+		public Reference(Scripture scripture)
 		{
-			reference = "Moses 1:39";
+			this.scripture = scripture;
 		}
+
+		public string ReferenceKey()
+		{
+			return scripture.GetRandomScripture().Key;
+		}
+
+		public string ReferenceValue()
+		{
+            return scripture.GetRandomScripture().Value;
+        }
     }
 }
 
