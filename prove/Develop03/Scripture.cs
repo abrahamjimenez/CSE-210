@@ -11,6 +11,8 @@ namespace Develop03
 		private List<Verse> verseList;
         private List<string> allVerses = new List<string>();
 		public int listLength;
+		string verseWords;
+		string randomScripture;
 
         public Scripture()
 		{
@@ -30,27 +32,22 @@ namespace Develop03
 			// Code under here will get a random number
 			Random random = new Random();
 			listLength = random.Next(0, allVerses.Count);
-			string randomScripture = allVerses[listLength];
-			Console.WriteLine($"1. {listLength}"); // Checking random number generated
-			Console.WriteLine(randomScripture);
-            return randomScripture;
+			randomScripture = allVerses[listLength];
+            return randomScripture; // This will return a random reference
 		}
 
-		public void HoldWords() // This will hold the verse words
+		public string HoldWords() // This will hold the verse words
 		{
-            
+			// I need to get the verses, then pass them through the words
+			Verse scriptures = new Verse();
+			verseWords = scriptures.HoldWords()[listLength]; // This will get the same index as the randomScripture number
+
+			return verseWords;
         }
 
 		public void DisplayWords() // This will get it all
 		{
-
-		}
-
-		public int GetRandomNumber()
-		{
-            Console.WriteLine($"2. {listLength}"); // Checking random number generated
-
-            return 0;
+            Console.WriteLine($"{randomScripture} {verseWords}");
 		}
 	}
 }

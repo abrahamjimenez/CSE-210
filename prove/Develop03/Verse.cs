@@ -30,8 +30,8 @@ namespace Develop03
 
             foreach (string word in wordList) // This prints out the verses
 			{
-				Console.WriteLine($"Scripture: {word}"); // This will write the scripture
-				Console.WriteLine(wordList[0]); // This will get the verse
+				//Console.WriteLine($"Scripture: {word}"); // This will write the scripture
+				//Console.WriteLine(wordList[0]); // This will get the verse
 			}
 			return wordList;
 		}
