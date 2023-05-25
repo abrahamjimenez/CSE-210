@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace Develop03
 {
     /// <summary>
@@ -6,21 +8,27 @@ namespace Develop03
     /// </summary>
     public class Reference
 	{
-		string reference;
+		string reference1 = "Moses 1:39";
+		string reference2 = "Matthew 5:14-16";
 
 		public Reference()
 		{
 
 		}
 
-		public void SetReference()
+		public List<string> SetReference()
 		{
+			List<string> references = new List<string>();
+            references.Add(reference1);
+            references.Add(reference2);
 
-		}
+			return references;
+        }
 
-		public void GetReference()
+		public List<string> GetReference()
 		{
-
+			List<string> references = SetReference();
+			return references;
 		}
 	}
 }
