@@ -6,16 +6,16 @@ class Program
 
     static void Main(string[] args)
     {
-        //Words words = new Words("this makes no sense");
-         //words.GetInvisible();
-
         Verse verse = new Verse();
         //verse.HoldWords();
 
         Scripture scripture = new Scripture();
-        scripture.HoldReference();
-        scripture.HoldWords();
-        scripture.DisplayWords();
+        //scripture.HoldReference();
+        //scripture.HoldWords();
+        //scripture.DisplayWords();
+
+        Words words = new Words(scripture.HoldWords()); // This will get the words and replace with '___'
+        words.GetInvisible(); // The words. needs to be the words in DisplayWords();
 
     }
 }

@@ -42,7 +42,7 @@ namespace Develop03
 			Verse scriptures = new Verse();
 			verseWords = scriptures.HoldWords()[listLength]; // This will get the same index as the randomScripture number
 
-			return verseWords;
+			return verseWords; // This returns the words in the scripture
         }
 
 		public void DisplayWords() // This will get it all
