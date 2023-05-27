@@ -10,6 +10,8 @@ namespace Develop03
     {
         string[] word;
         bool visible;
+        Check check;
+        bool checkForUnderscores;
 
         int replacedCount;
 
@@ -35,16 +37,27 @@ namespace Develop03
                 Console.WriteLine("Press enter to continue");
                 Console.ReadLine();
 
-                // use if statement to check
-                while (word[rnd] != replaceWithUnderscores && !word[rnd].Contains("_") && word[rnd] != null)
-                {
-                    Console.WriteLine($"-YES: {word[rnd]}-");
-                    word[rnd] = replaceWithUnderscores;
-                    replacedCount++;
-                    Console.WriteLine("runs1");
-                }
+                //check = new Check(word[rnd]);
+                //checkForUnderscores = check.CheckUnderscore();
+                word[rnd] = replaceWithUnderscores;
 
-                Console.WriteLine("runs2");
+                // use if statement to check
+                //Console.WriteLine(!word[rnd].Contains("_")); // Returns true
+                //Console.WriteLine(word[rnd]);
+                //Console.WriteLine(word[rnd] = replaceWithUnderscores);
+                //Console.WriteLine(word[rnd].Contains("_")); // Returns true
+                //Console.WriteLine(word[rnd]);
+                //// Todo: Uncomment if statement later
+                //if (!word[rnd].Contains("_") == false)
+                //{
+
+                //    Console.WriteLine("runs1");
+                //} else
+                //{
+                //    word[rnd] = replaceWithUnderscores;
+                //    replacedCount++;
+                //}
+
                 // This code is not done yet. Now I have to get the whole sentence back together, but instead of the word, it needs to have ___
                 //Console.WriteLine(); // Todo: add later
                 //word[rnd] = replaceWithUnderscores; // Replaces word with underscores
