@@ -5,7 +5,7 @@ namespace Develop04
     /// This activity will help you relax by walking your through breathing in and out slowly.
     /// Clear your mind and focus on your breathing.
     /// </summary>
-    public class Breathing_Activity
+    public class Breathing_Activity : Activity
     {
         public Breathing_Activity()
         {
@@ -44,7 +44,7 @@ namespace Develop04
             Console.WriteLine();
         }
 
-        public void DisplayBreaths(int duration)
+        private void DisplayBreaths(int duration)
         {
             int breathCycles = duration / 4;
 
@@ -52,6 +52,14 @@ namespace Develop04
             {
                 AlternateMessages();
             }
+        }
+
+        public void RunBreathingActivity()
+        {
+            Console.WriteLine(StandardMessage());
+            int duration = DurationPrompt();
+
+            DisplayBreaths(duration);
         }
     }
 }
