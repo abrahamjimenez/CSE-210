@@ -12,19 +12,46 @@ namespace Develop04
 
         }
 
-        private string AlternateMessages()
+        private void AlternateMessages()
         {
-            return "";
+            BreatheIn();
+            BreathOut();
+            Console.WriteLine();
         }
 
-        private string BreatheIn()
+        private void BreatheIn()
         {
-            return "";
+            int countDown = 3;
+
+            while (countDown != 0) {
+                Thread.Sleep(1000);
+                countDown--;
+                Console.Write($"\rBreathe in...{countDown + 1}");
+            }
+            Console.WriteLine();
         }
 
-        private string BreathOut()
+        private void BreathOut()
         {
-            return "";
+            int countDown = 3;
+
+            while (countDown != 0)
+            {
+                Thread.Sleep(1000);
+                countDown--;
+                Console.Write($"\rNow breathe out...{countDown + 1}");
+            }
+            Console.WriteLine();
+        }
+
+        public void DisplayBreaths(int duration)
+        {
+            int breathCycles = duration / 4;
+
+            for (int i = 0; i < breathCycles; i++)
+            {
+                AlternateMessages();
+            }
         }
     }
 }
