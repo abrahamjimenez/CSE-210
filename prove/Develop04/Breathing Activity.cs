@@ -56,10 +56,12 @@ namespace Develop04
 
         public void RunBreathingActivity()
         {
-            Console.WriteLine(StandardMessage());
+            StandardMessage();
             int duration = DurationPrompt();
 
             DisplayBreaths(duration);
+
+            FinishMessage(duration, "Breathing");
         }
     }
 }

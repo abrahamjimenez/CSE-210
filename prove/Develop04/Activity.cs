@@ -8,14 +8,18 @@ namespace Develop04
 
         }
 
-        public string StandardMessage()
+        public void StandardMessage()
         {
-            return "";
+            Console.Clear();
+            Console.WriteLine($"Welcome to the {"Breathing"} Activity\n\nThis activity will " +
+                $"help you relax by walking your through breathing in and out slowly.\n\n");
         }
 
         public int DurationPrompt()
         {
-            return 0;
+            Console.WriteLine("How long, in seconds, would you like in your session?");
+            int seconds = int.Parse(Console.ReadLine());
+            return seconds;
         }
 
         public void PauseAfterMessage()
@@ -33,9 +37,9 @@ namespace Develop04
 
         }
 
-        public string FinishMessage()
+        public void FinishMessage(int seconds, string activity)
         {
-            return "";
+            Console.WriteLine($"Well done! You have completed {seconds} seconds of the {activity} Activity");
         }
     }
 }
