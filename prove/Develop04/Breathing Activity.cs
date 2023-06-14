@@ -56,7 +56,7 @@ namespace Develop04
 
         public void RunBreathingActivity()
         {
-            StandardMessage();
+            StandardMessageBreathing();
             int duration = DurationPrompt();
 
             DisplayBreaths(duration);

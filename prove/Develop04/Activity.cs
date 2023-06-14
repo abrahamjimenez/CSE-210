@@ -8,11 +8,17 @@ namespace Develop04
 
         }
 
-        public void StandardMessage()
+        public void StandardMessageBreathing()
         {
             Console.Clear();
-            Console.WriteLine($"Welcome to the {"Breathing"} Activity\n\nThis activity will " +
+            Console.WriteLine($"Welcome to the Breathing Activity\n\nThis activity will " +
                 $"help you relax by walking your through breathing in and out slowly.\n\n");
+        }
+
+        public void StandardMessageReflection()
+        {
+            Console.Clear();
+            Console.WriteLine($"Welcome to the Relfection Activity\n\nThis activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.\n\n");
         }
 
         public int DurationPrompt()
@@ -22,9 +28,27 @@ namespace Develop04
             return seconds;
         }
 
-        public void PauseAfterMessage()
+        public void DisplayPausedMessages(string randomPrompt)
         {
+            for (int i = 0; i < 4; i++)
+            {
+                PauseAfterMessage(5);
+                Console.WriteLine(randomPrompt);
+                Console.WriteLine();
+            }
+        }
 
+        public void PauseAfterMessage(int DurationPrompt)
+        {
+            int countDown = DurationPrompt;
+
+            while (countDown != 0)
+            {
+                Thread.Sleep(1000);
+                countDown--;
+                Console.Write($"\rPonder...{countDown + 1}");
+            }
+            Console.WriteLine();
         }
 
         public string ShowCountdown()
