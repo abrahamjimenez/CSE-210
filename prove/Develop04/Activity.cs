@@ -21,6 +21,12 @@ namespace Develop04
             Console.WriteLine($"Welcome to the Relfection Activity\n\nThis activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.\n\n");
         }
 
+        public void StandardMessageListing()
+        {
+            Console.Clear();
+            Console.WriteLine($"Welcome to the Listing Activity\n\nThis activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.\n\n");
+        }
+
         public int DurationPrompt()
         {
             Console.WriteLine("How long, in seconds, would you like in your session?");
