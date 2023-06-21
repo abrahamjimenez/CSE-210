@@ -18,7 +18,7 @@ namespace Learning05
 			return color;
 		}
 
-		public virtual void GetOverride()
+		public virtual void GetArea()
 		{
 
 		}
