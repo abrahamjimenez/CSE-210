@@ -3,17 +3,17 @@ namespace Learning05
 {
 	public class Square : Shape
 	{
-		double side;
+		double _side;
 
-		public Square(string color, double side)
+		public Square(string color, double side) : base (color)
 		{
-
+			_side = side;
 		}
 
-		public override void GetArea()
-		{
-
-		}
-	}
+        public override double GetArea()
+        {
+            return _side * _side;
+        }
+    }
 }
 
