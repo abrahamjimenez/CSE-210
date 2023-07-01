@@ -10,13 +10,15 @@ namespace Develop05
             "2. Eternal Goal",
             "3. Checklist Goal"
             };
+        private string goalName;
+        private string goalDesc;
+        private string goalPoints;
+        string[] addGoals = new string[]
+            {
+
+            };
 
         public CreateNewGoal()
-        {
-
-        }
-
-        private void TypesOfGoals()
         {
 
         }
@@ -24,7 +26,38 @@ namespace Develop05
         public void SimpleGoal()
         {
             Console.WriteLine("What is the name of your goal? ");
-            Console.Read();
+            goalName = Console.ReadLine();
+            Console.WriteLine("What is a short description of it? Study for at least 10 minutes");
+            goalDesc = Console.ReadLine();
+            Console.WriteLine("What is the amount of points assosiated with this goal?");
+            goalPoints = Console.ReadLine();
+        }
+
+        public void EternalGoal()
+        {
+            Console.WriteLine("What is the name of your goal? ");
+            goalName = Console.ReadLine();
+            Console.WriteLine("What is a short description of it? Study for at least 10 minutes");
+            goalDesc = Console.ReadLine();
+            Console.WriteLine("What is the amount of points assosiated with this goal?");
+            goalPoints = Console.ReadLine();
+        }
+
+        public void ChecklistGoal()
+        {
+            Console.WriteLine("What is the name of your goal? ");
+            goalName = Console.ReadLine();
+            Console.WriteLine("What is a short description of it? Study for at least 10 minutes");
+            goalDesc = Console.ReadLine();
+            Console.WriteLine("What is the amount of points assosiated with this goal?");
+            goalPoints = Console.ReadLine();
+        }
+
+        public void DisplayGoals()
+        {
+            Console.WriteLine($"Name: {goalName}");
+            Console.WriteLine($"Description: {goalDesc}");
+            Console.WriteLine($"Points: {goalPoints}");
         }
 
         public void DisplayTypesOfGoals()
@@ -37,20 +70,18 @@ namespace Develop05
 
         public void RunChoice(int input)
         {
-            if (input == '1')
+            if (input == 1)
             {
-                Console.WriteLine("SIMPLE");
                 SimpleGoal();
             }
-            else if (input == '2')
+            else if (input == 2)
             {
-                //EternalGoal();
+                EternalGoal();
             }
-            else if (input == '3')
+            else if (input == 3)
             {
-                //CheckListGoal();
+                ChecklistGoal();
             }
-            Console.WriteLine(input); // TODO: Fix this input not running inside the if statement above
         }
 
         public int SelectChoice()
@@ -65,6 +96,7 @@ namespace Develop05
         {
             DisplayTypesOfGoals();
             SelectChoice();
+            DisplayGoals();
         }
     }
 }
